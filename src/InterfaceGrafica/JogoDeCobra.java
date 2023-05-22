@@ -22,7 +22,7 @@ public final class JogoDeCobra extends JPanel implements Runnable, KeyListener {
     public static final int tamanho_bloco=20;
     public static final int tamanho_mover=20;
     
-    private int direcao = 1; //0- esquerdo, 1-direito, 2 cima, 3baixo
+    private int direcao ;
     private Thread thread;
     
     
@@ -35,12 +35,13 @@ public final class JogoDeCobra extends JPanel implements Runnable, KeyListener {
     JogoDeCobra(){
     
         blocks = new ArrayList<>();
-        
+        //List fornece métodos para manipular elementos baseado na sua posição
+        //(ou índice) numérica na lista, remover determinado elemento, 
         Tamanho_array= blocks.size();
         
         Random renderizar = new Random();
         
-        a = new Bolinha((renderizar.nextInt(3)+1)*tamanho_bloco,(renderizar.nextInt(6)+1)*tamanho_bloco);
+        a = new Bolinha((renderizar.nextInt(37)+1)*tamanho_bloco,(renderizar.nextInt(26)+1)*tamanho_bloco);
         
         Cobra b = new Cobra(tamanho_bloco,tamanho_bloco );
         
@@ -53,6 +54,7 @@ public final class JogoDeCobra extends JPanel implements Runnable, KeyListener {
         
         thread = new Thread(this);
         thread.start();
+        System.out.println("nível "+ a);
     }
     @Override
     protected void paintComponent(Graphics g) {

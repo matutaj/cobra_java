@@ -20,15 +20,12 @@ public class Tela extends JFrame {
     
     
     JogoDeCobra cobra = new JogoDeCobra();
-    Scanner teclado = new Scanner(System.in);
-      static JTextField texto_Boas_Vinda = new JTextField("Bem-Vindo ao Meu Jogo de Cobra\n Ditite o seu nome");
-     static JTextField erro = new JTextField("O Jogador deve ter um Nome");
-     
-    private String nomeDoJogador;
+    static JTextField erro = new JTextField("O Jogador deve ter um Nome");
+    
       
     public Tela(String n){   
         super("Jogo da Cobra Jogador: "+n);
-        if(nomeDoJogador == n){
+        if( n==null ){
             super.add(erro);
         }else {
         super.add(cobra);
