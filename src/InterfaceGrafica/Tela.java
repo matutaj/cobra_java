@@ -5,6 +5,7 @@
 package InterfaceGrafica;
 import java.awt.Color;
 import javax.swing.*;
+import java.util.*;
 
 /**
  *
@@ -18,11 +19,15 @@ public class Tela extends JFrame {
     public static final int altura_tela = 600;
     
     
-    DrawPanel cobra = new DrawPanel();
+    JogoDeCobra cobra = new JogoDeCobra();
+    Scanner teclado = new Scanner(System.in);
+     JLabel texto_Boas_Vinda = new JLabel();
     
+    private String nomeDoJogador;
       
     public Tela(){   
         super("Jogo da Cobra");
+        
         super.add(cobra);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setSize(largura_tela,altura_tela);

@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  *
  * @author matuta_jr
  */
-public final class DrawPanel extends JPanel implements Runnable, KeyListener {
+public final class JogoDeCobra extends JPanel implements Runnable, KeyListener {
     
     public static final int tamanho_bloco=20;
     public static final int tamanho_mover=20;
@@ -32,7 +32,7 @@ public final class DrawPanel extends JPanel implements Runnable, KeyListener {
     
     public static int Tamanho_array;
     
-    DrawPanel(){
+    JogoDeCobra(){
     
         blocks = new ArrayList<>();
         
