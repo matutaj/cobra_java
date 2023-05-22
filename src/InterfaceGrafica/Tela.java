@@ -21,13 +21,13 @@ public class Tela extends JFrame {
     
     JogoDeCobra cobra = new JogoDeCobra();
     Scanner teclado = new Scanner(System.in);
-     JLabel texto_Boas_Vinda = new JLabel();
+     JLabel texto_Boas_Vinda = new JLabel("Bem-Vindo ao Meu Jogo de Cobra\n digite o seu Nome");
     
     private String nomeDoJogador;
       
     public Tela(){   
         super("Jogo da Cobra");
-        
+        super.add(texto_Boas_Vinda);
         super.add(cobra);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setSize(largura_tela,altura_tela);
