@@ -21,18 +21,25 @@ public class Tela extends JFrame {
     
     JogoDeCobra cobra = new JogoDeCobra();
     Scanner teclado = new Scanner(System.in);
-     JLabel texto_Boas_Vinda = new JLabel("Bem-Vindo ao Meu Jogo de Cobra\n digite o seu Nome");
-    
+      static JTextField texto_Boas_Vinda = new JTextField("Bem-Vindo ao Meu Jogo de Cobra\n Ditite o seu nome");
+     static JTextField erro = new JTextField("O Jogador deve ter um Nome");
+     
     private String nomeDoJogador;
       
-    public Tela(){   
-        super("Jogo da Cobra");
-        super.add(texto_Boas_Vinda);
+    public Tela(String n){   
+        super("Jogo da Cobra Jogador: "+n);
+        if(nomeDoJogador == n){
+            super.add(erro);
+        }else {
         super.add(cobra);
+        }
+        
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setSize(largura_tela,altura_tela);
         super.setLocationRelativeTo(null);
         super.setResizable(false);
         super.setVisible(true);
     }
+    
+    
 }
