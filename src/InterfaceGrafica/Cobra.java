@@ -26,7 +26,8 @@ public class Cobra implements Metodos {
     @Override
     public void draw(Graphics g) {
         g.setColor(Color.GREEN);
-        g.fillRect(X, Y, JogoDeCobra.tamanho_bloco, JogoDeCobra.tamanho_bloco);
+        g.fillRect(X, Y, JogoDeCobra.posicao_bolinha, JogoDeCobra.posicao_bolinha);
+       
   }
     
     @Override

@@ -24,7 +24,7 @@ public class Bolinha implements Metodos {
     @Override
     public void draw(Graphics g) {
         g.setColor(Color.BLUE);
-        g.fillRect(X, Y, X, X);
+        g.fillRect(X, Y, JogoDeCobra.tamanho_mover, JogoDeCobra.posicao_bolinha);
   }
     
     @Override
